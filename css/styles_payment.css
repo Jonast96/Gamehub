@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0;
+  font-family: muli, sans-serif;
+}
+@font-face {
+  font-family: muli;
+  src: url(/fonts/Mulish-VariableFont_wght.ttf);
+}
+body {
+  background-color: #c6cefb;
+}
+
+.logo {
+  max-width: 230px;
+  display: flex;
+  margin: auto;
+}
+.grid-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fefefe;
+  border-radius: 20px;
+
+  display: grid;
+  gap: 150px;
+  grid-auto-flow: column;
+  margin-top: 50px;
+  padding: 50px;
+}
+.cart {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0px 30px;
+  margin-bottom: 85px;
+  border-radius: 10px;
+}
+
+p {
+  padding: 10px 0px;
+  font-size: 25px;
+}
+input {
+  padding: 10px;
+  padding-right: 50px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1;
+}
+h2,
+h1,
+h3 {
+  font-size: 32px;
+}
+.cta {
+  text-decoration: none;
+  color: white;
+  background-color: #5c68bf;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 20px 0px;
+  text-align: center;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.cart h2 {
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+}
+.cart p {
+  font-size: 20px;
+  text-align: center;
+}
+.home {
+  padding: 20px;
+}
+.fas {
+  padding: 20px;
+}
+.home {
+  text-decoration: none;
+  color: #2f3c8a;
+}
+@media all and (max-width: 700px) {
+  .grid-container {
+    grid-auto-flow: row;
+  }
+}
