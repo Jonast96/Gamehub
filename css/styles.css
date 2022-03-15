@@ -81,26 +81,22 @@ h1 {
   background-color: #1b203d;
   padding: 0px 20px;
 }
-.weekly_sale_content {
-  grid-template-columns: repeat(6, 1fr);
-}
+
 .weekly_sale_item {
-  width: 300px;
+  width: 150px;
 }
 .sale_img {
   width: 100%;
   height: auto;
+  box-shadow: 4px 4px 7px #1b203d;
 }
 .flex {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.flex2 {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+
 .sale_text {
   color: white;
   text-align: center;
@@ -138,6 +134,7 @@ h2 {
 
 .black {
   color: black;
+  margin-top: 5px;
 }
 .trending_container {
   margin: 0px 20px;
@@ -195,6 +192,12 @@ h3 {
 }
 .mobile_span3 {
   grid-column: span 3;
+  border-bottom: #707070;
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+.test {
+  margin-bottom: 5px;
 }
 
 /* Footer */
