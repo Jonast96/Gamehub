@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <script
-      src="https://kit.fontawesome.com/7be0e6a81f.js"
+      src="https://kit.fontawesome.com/4e89d93dba.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/header_footer.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,25 +38,17 @@
   <body>
     <header>
       <img class="logo" src="/images/GameHub_Logo.png" alt="logo" />
-      <nav>
-        <div>
-          <input class="search" type="text" placeholder="Search" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html">Browse</a></li>
-          <li><a href="#">Used games</a></li>
-          <li><a href="#">Sell games</a></li>
+      <div class="hamburger_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="hamburger">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Browse games</a></li>
+          <li><a href="#">My profile</a></li>
+          <li><a href="#">Contact us</a></li>
         </ul>
       </nav>
-      <section class="buttons">
-        <a class="cta" href="/register.html">Sign in/Register</a>
-        <a class="cta" href="/account.html">My account</a>
-        <a class="cta" href="/payment.html"
-          ><i class="fas fa-shopping-cart"></i
-        ></a>
-        <a class="cta" href="/contact.html">Contact</a>
-      </section>
     </header>
 
     <main>
@@ -63,43 +57,48 @@
         <div class="weekly_sale_content">
           <div class="flex">
             <div class="weekly_sale_item">
-              <img
-                class="sale_img"
-                src="/images/resize_gamecover1.jpg"
-                alt=""
-              />
-              <p class="sale_text large_text">Amazing game wow</p>
-              <p class="sale_text small_text">
-                <i class="old_price">10.00usd </i>
-                <i class="new_price">New price 4.20usd</i>
-              </p>
+              <a href="#">
+                <img
+                  class="sale_img sale_background"
+                  src="/images/resize_gamecover1.jpg"
+                  alt=""
+                />
+                <p class="sale_text large_text">Amazing game wow</p>
+                <p class="sale_text small_text">
+                  <i class="old_price">10.00usd </i>
+                  <i class="new_price">New price 4.20usd</i>
+                </p>
+              </a>
             </div>
             <div class="weekly_sale_item">
-              <img
-                class="sale_img"
-                src="/images/resize_gamecover2.jpg"
-                alt=""
-              />
-              <p class="sale_text">Amazing game wow</p>
-              <p class="sale_text">
-                <i class="old_price">10.00usd </i>
-                <i class="new_price">New price 4.20usd</i>
-              </p>
+              <a href>
+                <img
+                  class="sale_img sale_background"
+                  src="/images/resize_gamecover2.jpg"
+                  alt=""
+                />
+                <p class="sale_text">Amazing game wow</p>
+                <p class="sale_text">
+                  <i class="old_price">10.00usd </i>
+                  <i class="new_price">New price 4.20usd</i>
+                </p>
+              </a>
             </div>
             <div class="weekly_sale_item">
-              <img
-                class="sale_img"
-                src="/images/resize_gamecover3.jpg"
-                alt=""
-              />
-              <p class="sale_text">Amazing game wow</p>
-              <p class="sale_text">
-                <i class="old_price">10.00usd </i>
-                <i class="new_price">New price 4.20usd</i>
-              </p>
+              <a href="#">
+                <img
+                  class="sale_img sale_background"
+                  src="/images/resize_gamecover3.jpg"
+                  alt=""
+                />
+                <p class="sale_text">Amazing game wow</p>
+                <p class="sale_text">
+                  <i class="old_price">10.00usd </i>
+                  <i class="new_price">New price 4.20usd</i>
+                </p>
+              </a>
             </div>
           </div>
-
         </div>
         <a class="cta_mobile" href="#">View all deals</a>
       </div>
@@ -111,19 +110,37 @@
         </p>
         <div class="trending_games">
           <div>
-            <img class="sale_img" src="/images/resize_gamecover1.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover1.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
           <div>
-            <img class="sale_img" src="/images/resize_gamecover2.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href="#">
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover2.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
           <div>
-            <img class="sale_img" src="/images/resize_gamecover3.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover3.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
         </div>
         <a class="cta_mobile black" href="#">See more</a>
@@ -145,24 +162,49 @@
         <input class="browse_search" type="search" placeholder="Search" />
         <div class="browse_games">
           <div class="mobile_span3">
-            <img class="sale_img" src="/images/resize_gamecover1.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black test">10.00usd</p>
-          </div class="mobile_span3">
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover1.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black test">10.00usd</p>
+            </a>
+          </div>
+
           <div class="mobile_span3">
-            <img class="sale_img" src="/images/resize_gamecover2.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover2.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
           <div class="mobile_span3">
-            <img class="sale_img" src="/images/resize_gamecover3.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover3.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
           <div class="mobile_span3">
-            <img class="sale_img" src="/images/resize_gamecover1.jpg" alt="" />
-            <p class="sale_text black">Amazing game wow</p>
-            <p class="sale_text black">10.00usd</p>
+            <a href>
+              <img
+                class="sale_img"
+                src="/images/resize_gamecover1.jpg"
+                alt=""
+              />
+              <p class="sale_text black">Amazing game wow</p>
+              <p class="sale_text black">10.00usd</p>
+            </a>
           </div>
         </div>
       </div>
@@ -174,11 +216,13 @@
         <a href="#">My profiles</a>
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
-        <p>Bergensgaten 24, 5014 <br>
-          Bergen, Norway <br>
-          +4711223344</p>
+        <p>
+          Bergensgaten 24, 5014 <br />
+          Bergen, Norway <br />
+          +4711223344
+        </p>
       </div>
-
     </footer>
+    <script src="/js/main.js"></script>
   </body>
 </html>

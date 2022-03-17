@@ -1,0 +1,54 @@
+/* Header */
+header {
+  background: linear-gradient(#343f7b, #11258e);
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+ul li {
+  text-align: center;
+  padding: 5px;
+  list-style-type: none;
+}
+ul li a {
+  color: white;
+  font-size: 1.2rem;
+}
+nav {
+  display: none;
+  animation-duration: 0.5s;
+  animation-name: test;
+}
+@keyframes test {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #343f7b;
+  color: white;
+  padding: 10px 0px;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+  padding: 5px;
+}
+h4 {
+  font-size: 1.2rem;
+}
