@@ -51,6 +51,7 @@ h1 {
   text-align: center;
 }
 .cta_mobile {
+  flex-basis: 100%;
   color: white;
   text-align: center;
   text-decoration: underline;
@@ -200,12 +201,20 @@ h3 {
   }
   .flex {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     gap: 0px;
+    justify-items: center;
+  }
+  .sale_img {
+    width: 100%;
   }
   .h1 {
-    grid-column-start: 3;
-    grid-column-end: 11;
+    grid-column-start: 2;
+    grid-column-end: 14;
+  }
+  .cta_mobile {
+    grid-column-start: 2;
+    grid-column-end: 14;
   }
   .mobile_hidden {
     grid-row-start: 1;
@@ -213,17 +222,8 @@ h3 {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .sale1 {
-    grid-column-start: 3;
-    grid-column-end: 6;
-  }
-  .sale2 {
-    grid-column-start: 6;
-    grid-column-end: 9;
-  }
-  .sale3 {
-    grid-column-start: 9;
-    grid-column-end: 12;
+  .weekly_sale_item {
+    grid-column: span 4;
   }
 
   .sale_nav_li {
