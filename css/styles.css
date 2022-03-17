@@ -235,6 +235,8 @@ h3 {
   .sale_p {
     color: white;
     font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   .sale_search {
     width: 100%;
