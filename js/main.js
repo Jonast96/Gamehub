@@ -11,10 +11,10 @@ hamburgerBtn.addEventListener("click", hamburgerDisplay)
 
 
 function hamburgerDisplay() {
-    if (hamburgerMenu.style.display === "block") {
+    if (hamburgerMenu.style.display === "flex") {
         hamburgerMenu.style.display = "none"
     } else {
-        hamburgerMenu.style.display = "block"
+        hamburgerMenu.style.display = "flex"
     }
 
 
