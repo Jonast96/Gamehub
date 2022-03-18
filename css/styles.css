@@ -117,6 +117,10 @@ a {
 
 /* Browse */
 
+.mobile_hidden_btn {
+  display: none;
+}
+
 .browse_container {
   margin: 10px 20px;
 }
@@ -184,6 +188,12 @@ h3 {
   }
   .sale_img {
     width: 250px;
+  }
+  .mobile_hidden_btn {
+    display: inline;
+  }
+  .more_filters {
+    display: none;
   }
 }
 
