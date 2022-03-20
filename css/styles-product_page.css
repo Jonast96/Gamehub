@@ -8,179 +8,71 @@
   font-family: muli;
   src: url(/fonts/Mulish-VariableFont_wght.ttf);
 }
-
-body {
-  background-color: #c6cefb;
+main {
+  padding: 10px;
 }
-/* Header */
-li,
-a,
-button {
+ul li a {
   text-decoration: none;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0% 3%;
-  background: linear-gradient(#343f7b, #11258e);
+
+h1 {
+  text-align: center;
+}
+.info_price {
+  text-align: center;
 }
 
-.logo {
-  width: 250px;
+.container_img {
+  max-width: 500px;
+  margin: 10px auto;
+  display: block;
 }
-.nav-links {
-  list-style: none;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 10px 60px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 10px 40px;
-  color: #1b203d;
+main img {
+  width: 100%;
+  height: auto;
 }
 button {
-  padding: 9px 25px;
-  background-color: #1b203d;
-  color: #ffff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  margin: 10px;
-  display: flex;
-}
-
-.search {
-  width: 600px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  height: 35px;
-  border: none;
-  padding-left: 20px;
-  margin-left: 200px;
-}
-
-.fas {
+  padding: 6px;
+  font-size: 1rem;
+  background-color: #132791;
+  border-style: none;
+  border-radius: 5px;
   color: white;
-  background-color: #1b203d;
-  padding: 9px 25px;
-  border-radius: 20px;
-  margin: 10px;
 }
-a .cta-contact {
-  background-color: white;
+.btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
-/* body */
-.product_info {
+.popup {
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 20vh;
+  width: 50vh;
+  border-width: 1px;
+  border-radius: 20px;
+}
+.flex {
   display: flex;
 }
-.game_info {
-  flex: 2;
-  padding: 70px;
-  font-size: 28px;
-}
-.small_text {
-  font-size: 12px;
-  margin: 0px 0px 50px 0px;
-  text-align: center;
-}
-h1 {
-  font-size: 50px;
-  text-align: center;
-}
-p {
-  margin: 50px;
-}
-.product_img {
-  flex: 1;
-  margin: 0 auto;
-  max-width: 800px;
-  margin-right: 70px;
-}
-.fifa_img {
-  max-width: 100%;
-  border-radius: 80px;
-  margin-top: 50px;
-}
-.cta-add_to_cart {
-  color: #1b203d;
-  border-radius: 15px;
-  display: block;
-  text-align: center;
-  background-color: white;
-  padding: 15px;
+h2 {
   margin-top: 10px;
-  margin-bottom: 15px;
 }
 
-@media all and (max-width: 1650px) {
-  .product-list {
-    flex-direction: row;
-  }
-  .search {
-    width: 200px;
-  }
-  header {
-    flex-direction: column;
-  }
-  .search {
-    display: none;
-  }
-  nav {
-    height: 100px;
-  }
-  .logo {
-    max-width: 150px;
-  }
-  button {
-    display: inline-block;
-    padding: 15px;
-    margin: 5px;
-    margin-bottom: 20px;
-  }
-  .nav-links li {
-    padding: 15px;
-    margin: 5px;
-    margin-top: 20px;
-  }
+.complete {
+  color: white;
+  text-decoration: none;
+  background-color: #132791;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
 }
 
-@media all and (max-width: 1500px) {
-  .product_info {
-    flex-direction: column;
-  }
-
-  p {
-    font-size: 28px;
-  }
-  .game_info {
-    padding: 30px 10px 0px 10px;
-  }
-  .product_img {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-  }
-  .fifa_img {
-    margin: 0px;
-    padding: 0px;
-  }
-}
-@media all and (max-width: 650px) {
-  .product_img .cta-add_to_cart {
-    padding: 10px;
-  }
-}
-
-@media all and (max-width: 530px) {
-  .nav-links li {
-    display: block;
-    padding: 5px;
-  }
-  button {
-    margin: 140px 0px 20px 0px;
-    padding: 3px;
-  }
+.continue {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
 }

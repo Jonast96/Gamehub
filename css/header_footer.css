@@ -2,6 +2,9 @@
 header {
   background: linear-gradient(#343f7b, #11258e);
 }
+body {
+  background-color: #f1f3ff;
+}
 .logo {
   display: block;
   margin-left: auto;
@@ -19,9 +22,7 @@ nav ul li {
   padding: 10px;
   list-style-type: none;
 }
-ul {
-  margin-top: 200px;
-}
+
 nav ul li a {
   color: white;
   font-size: 1.5rem;
@@ -30,7 +31,6 @@ nav {
   display: none;
   animation-duration: 0.5s;
   animation-name: test;
-  height: 84vh;
   justify-content: space-evenly;
 }
 @keyframes test {
@@ -45,8 +45,28 @@ nav {
   }
 }
 
+.hover {
+  position: relative;
+}
+.hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* Footer */
-.footer_content {
+footer {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -64,7 +84,7 @@ h4 {
 }
 
 @media screen and (min-width: 1100px) {
-  .fa-bars {
+  .hamburger_btn {
     display: none;
   }
   header {
@@ -84,6 +104,7 @@ h4 {
     display: flex;
     display: inline;
     justify-content: space-around;
+    padding: 0px;
   }
   nav ul li a {
     font-size: 1.5rem;
@@ -96,6 +117,26 @@ h4 {
     width: 200px;
     margin-right: 100%;
     padding: 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #343f7b;
+    color: white;
+    padding: 10px 0px;
+    justify-content: space-around;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  footer p {
+    font-size: 1rem;
   }
 }
 
