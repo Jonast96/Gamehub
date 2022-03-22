@@ -9,7 +9,7 @@
   src: url(/fonts/Mulish-VariableFont_wght.ttf);
 }
 main {
-  padding: 10px;
+  padding: 10px 20px;
 }
 ul li a {
   text-decoration: none;
@@ -20,6 +20,10 @@ h1 {
 }
 .info_price {
   text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container_img {
@@ -33,16 +37,22 @@ main img {
 }
 button {
   padding: 6px;
-  font-size: 1rem;
   background-color: #132791;
   border-style: none;
   border-radius: 5px;
   color: white;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.info {
+  text-align: center;
+}
+.left {
+  text-align: left;
 }
 .btn {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
 }
 
 .popup {
@@ -75,4 +85,35 @@ h2 {
   font-size: 1rem;
   text-decoration: none;
   color: black;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .container_img {
+    grid-column: span 2;
+  }
+  .info {
+    grid-column: span 2;
+    column-span: 2;
+  }
+  main {
+    margin: 0px 10%;
+  }
+
+  .left {
+    margin-bottom: 30px;
+  }
 }

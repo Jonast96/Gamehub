@@ -7,7 +7,7 @@ openModal.addEventListener("click", () => {
     modal.classList.add("flex")
 })
 
-window.onclick = function (event) {
+window.onclick = (event) => {
     if (event.target == modal) {
         modal.close();
         modal.classList.remove("flex")
