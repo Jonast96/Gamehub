@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/e9328af9f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/styles_register.css" />
+    <script
+      src="https://kit.fontawesome.com/e9328af9f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/header_footer.css" />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in/register</title>
-    <link rel="stylesheet" href="/css/styles_register.css" />
-    <!-- Hotjar Tracking Code for slett -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2859043, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
+    <title>Document</title>
   </head>
   <body>
-    <div class="main_register">
-      <div class="logo">
-        <img src="/images/GameHub_Logo.png" alt="Logo" width="300px" />
+    <header>
+      <div class="img">
+        <img class="logo" src="/images/GameHub_Logo.png" alt="logo" />
       </div>
-      <h1>Join the universe of games</h1>
-      <div class="email">
-        <p>E-mail</p>
-        <input class="input" type="text" placeholder="Enter E-mail" />
+      <div class="hamburger_btn">
+        <i class="fa-solid fa-bars fa-2x"></i>
       </div>
-      <div class="password">
-        <p>Password</p>
-        <input class="input" type="text" placeholder="Enter Password" />
-      </div>
-      <div>
-        <div class="age">
-          <label><input type="checkbox" /> I am over 15</label>
+      <nav class="hamburger">
+        <ul>
+          <li class="hover"><a href="/index.html">Home</a></li>
+          <li class="hover"><a href="#">Browse games</a></li>
+          <li class="hover"><a href="#">My profile</a></li>
+          <li class="hover"><a href="#">Contact us</a></li>
+          <li class="hover"><a href="#">My cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="img_div">
+          <h1>Join the universe of games</h1>
+          <div class="contact_container">
+            <h2>Get limited deals and customized offers just for you!</h2>
+
+            <form class="contactForm">
+              <div>
+                <label>
+                  Full name <br />
+                  <input name="name" id="name" />
+                </label>
+                <div class="form_error nameError">
+                  Please enter your full name
+                </div>
+              </div>
+              <div>
+                <label>
+                  Email <br />
+                  <input name="Email" id="email" />
+                </label>
+                <div class="form_error emailError">
+                  Please enter a valid email
+                </div>
+              </div>
+
+              <button class="submit-btn">Submit</button>
+            </form>
+            <h3>Sign up with Google or FaceBook</h3>
+            <div class="socials">
+              <i class="fa-brands fa-3x fa-google"></i>
+              <i class="fa-brands fa-3x fa-facebook"></i>
+            </div>
+            <div>
+              <h4>Already have an account?</h4>
+              <a class="signin" href="#">Click here to sign in</a>
+            </div>
+            <dialog class="popup">
+              <h2>Log in via socials</h2>
+              <div>
+                <label>
+                  Email <br />
+                  <input name="Email" id="email" />
+                </label>
+
+              <div>
+                <label>
+                  Password <br />
+                  <input name="Password" id="password" />
+                </label>
+              </div>
+              <button class="submit-btn">Sign in</button>
+            </dialog>
+          </div>
         </div>
-        <div class="agree">
-          <label
-            ><input type="checkbox" /> I have read and agree to the terms and
-            conditions
-          </label>
-        </div>
-        <div class="cta"><a href="/index.html">Make account</a></div>
-        <h2>Sign in with Google or Facebook</h2>
       </div>
-    </div>
+    </main>
+    <footer>
+      <h4>GameHubAS</h4>
+      <div class="footer_links">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">My profiles</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <p>
+        Bergensgaten 24, 5014 <br />
+        Bergen, Norway <br />
+        +4711223344
+      </p>
+    </footer>
+    <script type="module" src="/js/register.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
