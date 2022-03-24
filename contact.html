@@ -48,16 +48,62 @@
         <ul>
           <li class="hover"><a href="/index.html">Home</a></li>
           <li class="hover"><a href="#">Browse games</a></li>
-          <li class="hover"><a href="/account.html">My profile</a></li>
+          <li class="hover"><a href="/register.html">My profile</a></li>
           <li class="hover"><a href="/contact.html">Contact us</a></li>
           <li class="hover"><a href="#">My cart</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <h1>Contact us</h1>
+      <p>
+        Sed malesuada imperdiet neque a molestie. Vivamus egestas varius elit,
+        id consectetur augue mollis ac. Sed malesuada imperdiet neque a
+        molestie. Vivamus egestas varius elit, id consectetur augue mollis ac.
+        Sed malesuada imperdiet neque a molestie. Vivamus egestas varius elit,
+        id consectetur augue mollis ac.
+      </p>
+
+      <form class="contactForm">
+        <div>
+          <label>
+            Full name <br />
+            <input name="name" id="name" />
+          </label>
+          <div class="form_error nameError">Please enter your full name</div>
+        </div>
+        <div>
+          <label>
+            Email <br />
+            <input name="Email" id="email" />
+          </label>
+          <div class="form_error emailError">Please enter a valid email</div>
+        </div>
+
+        <div>
+          <p>Enter your question here</p>
+          <textarea
+            name="Textarea"
+            id="textarea"
+            cols="40"
+            rows="8"
+            placeholder="..."
+          ></textarea>
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+      <dialog class="popup">
+        <p>
+          Question submitted successfully. You will receive an answer within 5
+          business days.
+        </p>
+        <a class="homeBtn" href="/index.html">Back to home</a>
+      </dialog>
+    </main>
 
     <footer>
       <h4>GameHubAS</h4>
+
       <div class="footer_links">
         <ul>
           <li><a href="#">Contact us</a></li>
@@ -72,8 +118,9 @@
         +4711223344
       </p>
     </footer>
+    <script src="/js/formValidation.js"></script>
+    <script src="/js/contact.js"></script>
 
-    <!-- <script type="module" src="/js/register.js"></script> -->
     <script src="/js/main.js"></script>
   </body>
 </html>
