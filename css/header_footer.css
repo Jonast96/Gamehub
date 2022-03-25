@@ -65,6 +65,9 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
+.current_page {
+  text-decoration: underline;
+}
 
 /* Footer */
 footer {
