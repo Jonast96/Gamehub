@@ -10,32 +10,32 @@
 }
 
 .grid-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #fefefe;
   border-radius: 20px;
   display: grid;
-  gap: 150px;
-  grid-auto-flow: column;
-  margin-top: 50px;
-  padding: 50px;
+  text-align: center;
+  grid-template-columns: 2fr 2fr;
+  max-width: 900px;
+  margin: 150px auto;
+  padding: 20px;
 }
-.cart {
-  border-style: solid;
-  border-width: 1px;
-  padding: 0px 30px;
-  margin-bottom: 85px;
-  border-radius: 10px;
+/* .payment {
+  grid-column: span 2;
+}
+.shipping {
+  grid-column: span 2;
+} */
+.span4 {
+  grid-column: span 4;
+  margin-top: 20px;
 }
 
 p {
-  padding: 10px 0px;
-  font-size: 25px;
+  padding: 10px 0px 0px;
+  font-size: 1rem;
 }
 input {
   padding: 10px;
-  padding-right: 50px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1;
@@ -43,40 +43,24 @@ input {
 h2,
 h1,
 h3 {
-  font-size: 32px;
+  font-size: 1.5rem;
 }
 .cta {
-  text-decoration: none;
-  color: white;
-  background-color: blue;
   padding: 5px 20px;
-
+  border-style: none;
   border-radius: 10px;
-  margin: 20px 0px;
-  text-align: center;
-
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-.cart h2 {
-  text-align: center;
-  padding: 10px 20px 20px 20px;
-}
-.cart p {
-  font-size: 20px;
-  text-align: center;
-}
-.home {
-  padding: 20px;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
 }
 
-.home {
-  text-decoration: none;
-  color: #2f3c8a;
-}
-@media all and (max-width: 700px) {
-  .grid-container {
-    grid-auto-flow: row;
+@media screen and (max-width: 600px) {
+  .Shipping {
+    grid-column: span 4;
+    margin-top: 40px;
+  }
+  .payment {
+    grid-column: span 4;
   }
 }

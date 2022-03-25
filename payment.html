@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+      src="https://kit.fontawesome.com/e9328af9f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7be0e6a81f.js"
       crossorigin="anonymous"
     ></script>
     <meta charset="UTF-8" />
@@ -32,7 +36,9 @@
   <body>
     <header>
       <div class="img">
-        <img class="logo" src="/images/GameHub_Logo.png" alt="logo" />
+        <a href="/index.html">
+          <img class="logo" src="/images/GameHub_Logo.png" alt="logo" />
+        </a>
       </div>
       <div class="hamburger_btn">
         <i class="fa-solid fa-bars fa-2x"></i>
@@ -48,32 +54,49 @@
       </nav>
     </header>
 
-    <div class="grid-container">
-      <div class="payment">
-        <h1>Payment</h1>
-        <p>Credit card number</p>
-        <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" />
-        <p>Expiration date</p>
-        <input type="text" placeholder="Expiration date" />
-        <p>CVC</p>
-        <input type="text" placeholder="XXX" />
-        <p>Name</p>
-        <input type="text" placeholder="Ola Nordmann" />
-        <p>E-mail</p>
-        <input type="text" placeholder="Ola.Nordmann@gmail.com" />
-      </div>
-      <div class="Shipping">
-        <div class="cart">
-          <h2>Items in cart</h2>
-          <p>x1 Fifa 22 £59.99</p>
+    <main>
+      <div class="grid-container">
+        <div class="payment">
+          <h1>Payment</h1>
+          <p>Credit card number</p>
+          <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" />
+          <p>Expiration date</p>
+          <input type="text" placeholder="Expiration date" />
+          <p>CVC</p>
+          <input type="text" placeholder="XXX" />
+          <p>Name</p>
+          <input type="text" placeholder="Ola Nordmann" />
+          <p>E-mail</p>
+          <input type="text" placeholder="Ola.Nordmann@gmail.com" />
         </div>
-        <h3>Shipping</h3>
-        <p>Adresse</p>
-        <input type="text" placeholder="Gågaten 23" />
-        <p>Postal code / city</p>
-        <input type="text" placeholder="5847" />
-        <div><a class="cta" href="index.html">Complete Purchase</a></div>
+        <div class="Shipping">
+          <h3>Shipping</h3>
+          <p>Adresse</p>
+          <input type="text" placeholder="Gågaten 23" />
+          <p>Postal code / city</p>
+          <input type="text" placeholder="5847" />
+        </div>
+        <div class="span4">
+          <a class="cta" href="index.html">Complete Purchase</a>
+        </div>
       </div>
-    </div>
+    </main>
+    <footer>
+      <h4>GameHubAS</h4>
+      <div class="footer_links">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">My profiles</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <p>
+        Bergensgaten 24, 5014 <br />
+        Bergen, Norway <br />
+        +4711223344
+      </p>
+    </footer>
+    <script src="/js/main.js"></script>
   </body>
 </html>
