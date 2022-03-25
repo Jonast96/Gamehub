@@ -35,3 +35,5 @@ window.onclick = (event) => {
         modal.classList.remove("flex")
     }
 }
+
+submitBtn.addEventListener("hover")
