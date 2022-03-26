@@ -55,31 +55,78 @@
     </header>
 
     <main>
-      <div class="grid-container">
+
+      <form class="grid-container">
         <div class="payment">
-          <h1>Payment</h1>
-          <p>Credit card number</p>
-          <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" />
-          <p>Expiration date</p>
-          <input type="text" placeholder="Expiration date" />
-          <p>CVC</p>
-          <input type="text" placeholder="XXX" />
-          <p>Name</p>
-          <input type="text" placeholder="Ola Nordmann" />
-          <p>E-mail</p>
-          <input type="text" placeholder="Ola.Nordmann@gmail.com" />
+          <h2>Payment details</h2>
+          <div>
+            <label>
+              Card number
+               <br />
+              <input placeholder="XXXX-XXXX-XXXX-XXXX" name="card_info" id="card_info" />
+            </label>
+            <div class="form_error">This field is required</div>
+          </div>
+          <div>
+            <label>
+              Expiration date <br />
+              <input placeholder="02/24" name="expiration_date" id="expiration_date" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
+          <div>
+            <label>
+              CVC
+               <br />
+              <input placeholder="123" name="cvc" id="cvc" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
+          <div>
+            <label>
+              Name <br />
+              <input placeholder="Ola Nordmann" name="name" id="name" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
+          <div>
+            <label>
+              E-mail
+               <br />
+              <input placeholder="Ola.Nordmann@gmail.com" name="email" id="email" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
         </div>
-        <div class="Shipping">
-          <h3>Shipping</h3>
-          <p>Adresse</p>
-          <input type="text" placeholder="Gågaten 23" />
-          <p>Postal code / city</p>
-          <input type="text" placeholder="5847" />
+        <div class="shipping">
+          <h3>Shipping details</h3>
+          <div>
+            <label>
+              Adresse <br />
+              <input placeholder="Frydenlundsveien 24" name="adresse" id="adresse" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
+          <div>
+            <label>
+              Postal code / city <br />
+              <input placeholder="5106, Øvre ervik" name="Email" id="email" />
+            </label>
+            <div class="form_error ">This field is required</div>
+          </div>
         </div>
         <div class="span4">
           <a class="cta" href="index.html">Complete Purchase</a>
         </div>
-      </div>
+        </form>
+
+
+
+
+
+
+      
+
     </main>
     <footer>
       <h4>GameHubAS</h4>
