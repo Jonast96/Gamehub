@@ -9,7 +9,7 @@ const submit = document.querySelector(".submit-btn");
 
 form.addEventListener("submit", validateForm);
 
-document.querySelector('form').addEventListener(submit, validateForm);
+// document.querySelector('form').addEventListener(submit, validateForm);
 
 
 function checkLen(value) {
