@@ -135,6 +135,10 @@ h3 {
   border-radius: 7px;
   border-width: 0.2px;
 }
+button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: rgb(38, 57, 77) 0px 20px 20px -10px;
+}
 .more_filters {
   background: none;
   border: none;

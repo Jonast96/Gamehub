@@ -127,7 +127,7 @@ function validateForm(event) {
 
     };
     if (checkLen(adresse.value)) {
-        nameError.style.display = "none"
+        adresseError.style.display = "none"
         adresse.style.borderColor = "green";
 
     } else {
