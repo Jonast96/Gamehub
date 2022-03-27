@@ -49,83 +49,89 @@
           <li class="hover"><a href="#">Browse games</a></li>
           <li class="hover"><a href="/register.html">My profile</a></li>
           <li class="hover"><a href="/contact.html">Contact us</a></li>
-          <li ><a class="current_page" href="/payment.html">My cart</a></li>
-        </ul> 
+          <li><a class="current_page" href="/payment.html">My cart</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-
-      <form class="grid-container form">
+      <form type class="grid-container form contactForm">
         <div class="payment">
           <h2>Payment details</h2>
-          <div>
+          <div class="margin">
             <label>
               Card number
-               <br />
-              <input placeholder="XXXX-XXXX-XXXX-XXXX" name="card_info" id="card_info" />
+              <br />
+              <input placeholder="XXXX-XXXX-XXXX-XXXX" name="card" id="card" />
             </label>
-            <div class="form_error card_error">This field is required</div>
+            <div class="form_error card_error">
+              This must consist of 16 numbers
+            </div>
           </div>
-          <div>
+          <div class="margin">
             <label>
               Expiration date <br />
-              <input placeholder="02/24" name="expiration_date" id="expiration_date" />
+              <input placeholder="02/24" name="expiration" id="expiration" />
             </label>
-            <div class="form_error expiration_error">This field is required</div>
+            <div class="form_error expiration_error">
+              This must consist of 4 numbers
+            </div>
           </div>
-          <div>
+          <div class="margin">
             <label>
               CVC
-               <br />
+              <br />
               <input placeholder="123" name="cvc" id="cvc" />
             </label>
-            <div class="form_error cvc_error">This field is required</div>
+            <div class="form_error cvc_error">
+              This must consist of 3 numbers
+            </div>
           </div>
-          <div>
+          <div class="margin">
             <label>
               Name <br />
               <input placeholder="Ola Nordmann" name="name" id="name" />
             </label>
-            <div class="form_error name_error">This field is required</div>
+            <div class="form_error nameError">This field is required</div>
           </div>
-          <div>
+          <div class="margin">
             <label>
               E-mail
-               <br />
-              <input placeholder="Ola.Nordmann@gmail.com" name="email" id="email" />
+              <br />
+              <input
+                placeholder="Ola.Nordmann@gmail.com"
+                name="email"
+                id="email"
+              />
             </label>
-            <div class="form_error mail_error">This field is required</div>
+            <div class="form_error emailError">This field is required</div>
           </div>
         </div>
         <div class="shipping">
           <h3>Shipping details</h3>
-          <div>
+          <div class="margin">
             <label>
               Adresse <br />
-              <input placeholder="Frydenlundsveien 24" name="adresse" id="adresse" />
+              <input
+                placeholder="Frydenlundsveien 24"
+                name="adresse"
+                id="adresse"
+              />
             </label>
             <div class="form_error adresse_error">This field is required</div>
           </div>
-          <div>
+          <div class="margin">
             <label>
               Postal code / city <br />
-              <input placeholder="5106, Øvre ervik" name="Email" id="email" />
+              <input placeholder="5106, Øvre ervik" name="city" id="city" />
             </label>
             <div class="form_error city_error">This field is required</div>
           </div>
         </div>
         <div class="span4">
-          <button class="btn">Complete purchase</button>
+          <button class="submit-btn">Submit</button>
         </div>
-        </form>
-
-       
-
-
-
-      
-
+      </form>
     </main>
     <footer>
       <h4>GameHubAS</h4>
@@ -143,6 +149,7 @@
         +4711223344
       </p>
     </footer>
+    <!-- <script src="/js/formValidation.js"></script> -->
     <script src="/js/payment.js"></script>
     <script src="/js/main.js"></script>
   </body>
