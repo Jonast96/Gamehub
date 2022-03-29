@@ -30,16 +30,23 @@ function validateForm(event) {
     event.preventDefault()
     if (checkLen(name.value)) {
         nameError.style.display = "none"
+        name.style.borderColor = "green";
+
     } else {
         nameError.style.display = "block"
+        name.style.borderColor = "red";
+
 
     };
 
     if (validateEmail(email.value)) {
         emailError.style.display = "none"
+        email.style.borderColor = "green";
+
 
     } else {
         emailError.style.display = "block"
+        email.style.borderColor = "red";
 
     };
 

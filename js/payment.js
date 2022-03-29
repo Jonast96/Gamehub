@@ -16,22 +16,10 @@ const cardError = document.querySelector(".card_error");
 const adresse = document.querySelector("#adresse");
 const adresseError = document.querySelector(".adresse_error");
 
-
-
-
-
-
-
-
-
-
-
+const city = document.querySelector("#city");
 const cityError = document.querySelector(".city_error");
 
-const city = document.querySelector("#city");
 const btn = document.querySelector(".submit-btn")
-
-
 
 
 
