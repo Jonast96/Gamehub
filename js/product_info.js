@@ -1,15 +1,75 @@
-/* add to cart */
-const modal = document.querySelector(".popup")
-const openModal = document.querySelector(".btn")
 
-openModal.addEventListener("click", () => {
-    modal.showModal()
-    modal.classList.add("flex")
-})
 
-window.onclick = (event) => {
-    if (event.target == modal) {
+
+
+//Show game and info by using url + id
+
+const gameInfo = document.querySelector(".game_info")
+
+const queryString = document.location.search;
+
+const params = new URLSearchParams(queryString);
+
+const id = params.get("id");
+
+const url = "https://jonast.site/GameHub/wp-json/wc/store/products/" + id;
+
+
+async function APIcall() {
+  try {
+    const response = await fetch(url);
+
+    const json = await response.json();
+
+    console.log(json.name);
+
+    gameInfo.innerHTML += `
+
+        <div class = "container_img">
+        <h1>${json.name}</h1>
+        <p class="info_price">${json.prices.price}</p>
+      </div>
+      <div class="container">
+        <div class="container_img">
+          <img src="${json.images[0].src}" alt="Image of game cover" />
+        </div>
+        <div class="info">
+          <p class="left">
+          ${json.description}
+          </p>
+          <div class="btn">
+          <button>Add to cart</button>
+        </div>
+        </div>
+        <dialog class="popup">
+        <h2>Item added to cart</h2>
+        <p>Your item has successfully been added to the cart</p>
+        <a class="complete" href="/payment.html">Complete purchase</a>
+        <a class="continue" href="/Product_page.html?id=${json.id}">Continue shopping</a>
+      </dialog>
+        `
+
+    const modal = document.querySelector(".popup")
+    const openModal = document.querySelector(".btn")
+
+    openModal.addEventListener("click", () => {
+      modal.showModal()
+      modal.classList.add("flex")
+    })
+
+    window.onclick = (event) => {
+      if (event.target == modal) {
         modal.close();
         modal.classList.remove("flex")
+      }
     }
+
+  } catch (error) {
+    console.error();
+  }
 }
+APIcall()
+
+
+/* add to cart */
+

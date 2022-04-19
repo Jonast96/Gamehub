@@ -25,6 +25,7 @@ h1 {
 .weekly_sale {
   background-color: #1b203d;
   padding: 0px 20px;
+  
 }
 
 .weekly_sale_item {
@@ -45,6 +46,7 @@ h1 {
 .sale_text {
   color: white;
   text-align: center;
+  font-size: 1.2rem;
 }
 .cta_mobile {
   flex-basis: 100%;
@@ -74,6 +76,10 @@ h1 {
 .mobile_hidden {
   display: none;
 }
+.price {
+  font-weight: 600;
+}
+
 
 /* Trending */
 
@@ -101,7 +107,8 @@ a {
 }
 .trending_games {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -110,16 +117,23 @@ a {
   margin: 10px 0px;
   font-size: 1.2rem;
 }
+.background_img {
+  min-width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
 /* Browse */
 
 .mobile_hidden_btn {
   display: none;
 }
 
-.browse_container {
+/* .browse_container {
   margin: 10px 20px;
-}
+} */
 h3 {
   text-align: center;
   font-size: 2rem;
@@ -152,21 +166,57 @@ button:hover {
   padding: 5px;
 }
 
+/* .browse_games {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+} */
+
 .browse_games {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
 }
-.mobile_span3 {
-  grid-column: span 3;
-  border-bottom: #707070;
-  border-bottom-style: solid;
-  border-width: 1px;
-}
+
+
 .test {
   margin-bottom: 5px;
 }
+
+.browse_background_img {
+  width: 160px;
+  height: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.browse_border {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  background-color: #1b203d;
+  border-radius: 10px;
+  width: 210px;
+}
+
+.game_info {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
+.game_name_price {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.fa-brands {
+  color: white;
+}
+
 
 @media screen and (min-width: 700px) {
   .weekly_sale_item {
@@ -180,31 +230,57 @@ button:hover {
 }
 
 @media screen and (min-width: 800px) {
-  .browse_games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-  }
-  .sale_img {
-    width: 250px;
-  }
+
   .mobile_hidden_btn {
     display: inline;
   }
   .more_filters {
     display: none;
   }
+  /* .browse_background_img {
+    width: 200px;
+    height: 200px;
+  } */
 }
 
-@media screen and (min-width: 1480px) {
-  main {
-    margin: 0px 100px;
+@media screen and (min-width: 1200px) {
+  .browse_games {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .mobile_span3 {
+    grid-column: span 1;
   }
   .trending_container,
   .browse_container {
-    margin: 0;
+    margin:0px 200px;
   }
+}
+@media screen and (min-width: 1400px) {
+  .trending_games {
+  justify-content: center;
+  gap: 30px;
+  }
+  .info_text {
+    text-align: center;
+  }
+  .browse_background_img {
+    width: auto;
+    height: 300px;
+  }
+  .browse_border {
+    width: auto;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1480px) {
+  .weekly_sale {
+    margin: 0px 100px;
+  }
+
   .weekly_sale {
     margin-top: 10px;
     border-radius: 7px;
@@ -257,7 +333,5 @@ button:hover {
   .white {
     color: white;
   }
-  .mobile_span3 {
-    width: 20%;
-  }
+
 }
