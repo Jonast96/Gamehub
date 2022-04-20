@@ -8,11 +8,12 @@
   font-family: muli;
   src: url(/fonts/Mulish-VariableFont_wght.ttf);
 }
-main {
-  padding: 10px 20px;
-}
+
 ul li a {
   text-decoration: none;
+}
+main {
+  margin: 10px;
 }
 
 h1 {
@@ -22,14 +23,17 @@ h1 {
   text-align: center;
 }
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 70vh;
 }
 
+
 .container_img {
-  max-width: 500px;
-  margin: 10px auto;
-  display: block;
+background-repeat: no-repeat;
+background-position: center;
+grid-column: span 4;
+
 }
 main img {
   width: 100%;
@@ -54,12 +58,18 @@ button:hover {
 
 .info {
   text-align: center;
+  grid-column: span 4;
+
 }
 .left {
   text-align: left;
 }
 .btn {
   display: inline-block;
+}
+
+p {
+  text-align: left;
 }
 
 .popup {
@@ -100,26 +110,31 @@ body {
 footer {
   margin-top: auto;
 }
-
+@media screen and (min-width: 700px){
+  main {
+    padding: 10px 20px;
+    margin: 0px 10%;
+  }
+}
 @media screen and (min-width: 1100px) {
   .container {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
     gap: 20px;
   }
   .container_img {
     grid-column: span 2;
+    background-position: top;
+
   }
   .info {
     grid-column: span 2;
-    column-span: 2;
   }
-  main {
-    margin: 0px 10%;
-  }
+
 
   .left {
     margin-bottom: 30px;
   }
+
 }
+

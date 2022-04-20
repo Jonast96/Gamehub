@@ -30,13 +30,12 @@ async function APIcall() {
         <p class="info_price">${json.prices.price}</p>
       </div>
       <div class="container">
-        <div class="container_img">
-          <img src="${json.images[0].src}" alt="Image of game cover" />
+        <div class="container_img" style="background-image: url('${json.images[0].src}');">
+         
         </div>
         <div class="info">
-          <p class="left">
           ${json.description}
-          </p>
+          
           <div class="btn">
           <button>Add to cart</button>
         </div>
