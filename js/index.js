@@ -6,102 +6,101 @@ const trendingContainer = document.querySelector(".trending_games")
 
 const baseUrl = "https://jonast.site/GameHub/wp-json/wc/store/products?per_page=20";
 
+const displayError = document.querySelector(".error_msg")
+
 async function APIcall(url) {
-  const response = await fetch(url);
 
-  const json = await response.json();
+  try {
+    const response = await fetch(url);
 
-
-
-
-  for (i = 0; i < json.length; i++) {
+    const json = await response.json();
 
     console.log(json)
 
-    //SALE SECTION--------------------------------------------------------------
-    if (json[i].on_sale == true) {
-      container.innerHTML += `
-      <div class="weekly_sale_item sale1">
-      <a href="Product_page.html?id=${json[i].id}">
-          <div class = "img_container_sale">
-          <img
-          class="sale_img sale_background"
-          src="${json[i].images[0].src}"
-          alt=""Image of ${json[i].images[0].src} game cover""
-        />
-        </div>
-        <p class="sale_text large_text">${json[i].name}</p>
-        <p class="sale_text small_text">
-          <i class="old_price price">${json[i].prices.regular_price}kr </i>
-          <i class="new_price price">New price  ${json[i].prices.price}kr</i>
-        </p>
-      </a>
-    </div>
-      `
-    }
+
+    for (i = 0; i < json.length; i++) {
 
 
-    //TRENDING SECTION--------------------------------------------------------------
-
-    if (json[i].prices.price == 599) {
-
-
-      trendingContainer.innerHTML += `
-    
-      <a href="Product_page.html?id=${json[i].id}">      <div class = "background_img"  style="background-image: url('${json[i].images[0].src}');" >
+      //SALE SECTION--------------------------------------------------------------
+      if (json[i].on_sale == true) {
+        container.innerHTML += `
+        <div class="weekly_sale_item sale1">
+        <a href="Product_page.html?id=${json[i].id}">
+            <div class = "img_container_sale">
+            <img
+            class="sale_img sale_background"
+            src="${json[i].images[0].src}"
+            alt=""Image of ${json[i].images[0].src} game cover""
+          />
+          </div>
+          <p class="sale_text large_text">${json[i].name}</p>
+          <p class="sale_text small_text">
+            <i class="old_price price">${json[i].prices.regular_price}kr </i>
+            <i class="new_price price">New price  ${json[i].prices.price}kr</i>
+          </p>
+        </a>
       </div>
-      <p class="sale_text black">${json[i].name}</p>
-      <p class="sale_text price black">${json[i].prices.price}kr</p>
-      </a>
-`
-    }
+        `
+      }
 
 
+      //TRENDING SECTION--------------------------------------------------------------
 
-    //BROWSE SECTION ----------------------------------------------------------------------
+      if (json[i].prices.price == 599) {
 
-    browseContainer.innerHTML += `
-      <div class= "browse_border">
-      <a class = "mobile_span3" href="/Product_page.html?id=${json[i].id}">
-      <div class = "browse_background_img "  style="background-image: url('${json[i].images[0].src}');" >
-      </div>
-      <div class = "game_info">
-      <p class="sale_text">${json[i].tags[0].name}<p/>
-      <div>
-        <i class="fa-brands fa-xbox"></i>
-        <i class="fa-brands fa-playstation"></i>
-        <i class="fa-brands fa-steam"></i>
-      </div>
+
+        trendingContainer.innerHTML += `
       
-      </div>
+        <a href="Product_page.html?id=${json[i].id}">      <div class = "background_img"  style="background-image: url('${json[i].images[0].src}');" >
+        </div>
+        <p class="sale_text black">${json[i].name}</p>
+        <p class="sale_text price black">${json[i].prices.price}kr</p>
+        </a>
+  `
+      }
 
-      <div class ="game_name_price">
-      <p class="sale_text ">${json[i].name}</p>
-      <p class="sale_text price">${json[i].prices.price}kr</p>
-      </div>
-      </a>
-      </div>
+
+
+      //BROWSE SECTION ----------------------------------------------------------------------
+
+      browseContainer.innerHTML += `
+        <div class= "browse_border">
+        <a class = "mobile_span3" href="/Product_page.html?id=${json[i].id}">
+        <div class = "browse_background_img "  style="background-image: url('${json[i].images[0].src}');" >
+        </div>
+        <div class = "game_info">
+        <p class="sale_text">${json[i].tags[0].name}<p/>
+        <div>
+          <i class="fa-brands fa-xbox"></i>
+          <i class="fa-brands fa-playstation"></i>
+          <i class="fa-brands fa-steam"></i>
+        </div>
+        
+        </div>
+  
+        <div class ="game_name_price">
+        <p class="sale_text ">${json[i].name}</p>
+        <p class="sale_text price">${json[i].prices.price}kr</p>
+        </div>
+        </a>
+        </div>
+      `
+
+
+
+    }
+  } catch (error) {
+    displayError.classList.add("error_test")
+    displayError.innerHTML = `
+    <p class = "error_p">ops very big error</p>
     `
-
-
-
   }
 
 
 
 
 
-  //   <div class="mobile_span3">
-  //   <a href="/Product_page.html">
-  //     <img
-  //       class="sale_img"
-  //       src="/images/resize_gamecover1.jpg"
-  //       alt=""
-  //     />
-  //     <p class="sale_text black">Amazing game wow</p>
-  //     <p class="sale_text black test">10.00usd</p>
-  //   </a>
-  // </div>
+
 
 
 

@@ -70,5 +70,6 @@ async function APIcall() {
 APIcall()
 
 
-/* add to cart */
+
+
 

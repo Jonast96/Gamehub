@@ -10,6 +10,17 @@
 }
 
 /* Main */
+
+.error_test {
+  background-color: red;
+}
+.error_p {
+  text-align: center;
+  font-size: 3rem;
+
+  
+}
+
 /* Sale */
 h1 {
   text-align: center;
