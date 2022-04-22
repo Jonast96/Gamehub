@@ -92,7 +92,7 @@ async function APIcall(url) {
   } catch (error) {
     displayError.classList.add("error_test")
     displayError.innerHTML = `
-    <p class = "error_p">ops very big error</p> ${error}
+    <p class = "error_p">ops very big error</p>
     `
   }
 
