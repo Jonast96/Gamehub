@@ -177,12 +177,7 @@ button:hover {
   padding: 5px;
 }
 
-/* .browse_games {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-justify-content: center;
-} */
+
 
 .browse_games {
   display: flex;
@@ -226,6 +221,10 @@ justify-content: center;
 }
 .fa-brands {
   color: white;
+}
+.category {
+  color: white;
+  font-size: 0.8rem;
 }
 
 

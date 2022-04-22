@@ -69,7 +69,7 @@ async function APIcall(url) {
         <div class = "browse_background_img "  style="background-image: url('${json[i].images[0].src}');" >
         </div>
         <div class = "game_info">
-        <p class="sale_text">${json[i].tags[0].name}<p/>
+        <p class="category">${json[i].tags[0].name}<p/>
         <div>
           <i class="fa-brands fa-xbox"></i>
           <i class="fa-brands fa-playstation"></i>
