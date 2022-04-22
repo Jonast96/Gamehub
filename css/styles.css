@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0%;
   padding: 0;
-  font-family: muli, sans-serif;
+  font-family: sans-serif;
 }
 @font-face {
   font-family: muli;
@@ -17,9 +17,9 @@
 .error_p {
   text-align: center;
   font-size: 3rem;
-
-  
 }
+
+
 
 /* Sale */
 h1 {
