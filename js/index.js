@@ -8,6 +8,8 @@ const baseUrl = "https://jonast.site/GameHub/wp-json/wc/store/products?per_page=
 
 const displayError = document.querySelector(".error_msg")
 
+let saleHTML = "";
+
 async function APIcall(url) {
 
   try {
@@ -23,7 +25,9 @@ async function APIcall(url) {
 
       //SALE SECTION--------------------------------------------------------------
       if (json[i].on_sale == true) {
-        container.innerHTML += `
+        container.innerHTML = `Loading...`
+
+        saleHTML += `
         <div class="weekly_sale_item sale1">
         <a href="Product_page.html?id=${json[i].id}">
             <div class = "img_container_sale">
@@ -41,6 +45,7 @@ async function APIcall(url) {
         </a>
       </div>
         `
+        container.innerHTML = saleHTML;
       }
 
 
