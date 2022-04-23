@@ -125,3 +125,11 @@ function filterFunction() {
 }
 
 
+/* Scroll to top */
+
+const button = document.querySelector(".scroll_button")
+
+button.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
+})
+
