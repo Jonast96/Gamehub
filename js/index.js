@@ -8,9 +8,37 @@ const baseUrl = "https://jonast.site/GameHub/wp-json/wc/store/products?per_page=
 
 const displayError = document.querySelector(".error_msg")
 
+let saleHTML = `          <div class="h1">
+<h1>Weekly sale</h1>
+</div>
+<div class="mobile_hidden sale_nav">
+<p class="sale_p">Categories</p>
+<input class="sale_search" type="search" placeholder="Search.." />
+<ul class="sale_nav">
+  <li class="sale_nav_li"><a class="white" href="#">Sport</a></li>
+  <li class="sale_nav_li">
+    <a class="white" href="#">Action</a>
+  </li>
+  <li class="sale_nav_li">
+    <a class="white" href="#">Racing</a>
+  </li>
+  <li class="sale_nav_li">
+    <a class="white" href="#">Simulation</a>
+  </li>
+  <li class="sale_nav_li">
+    <a class="white" href="#">MMORGP</a>
+  </li>
+  <li class="sale_nav_li"><a class="white" href="#">Kids</a></li>
+  <li class="sale_nav_li">
+    <a class="white" href="#">Flying</a>
+  </li>
+</ul>
+</div>`;
+
 async function APIcall(url) {
 
   try {
+    container.innerHTML = `<div class="lds-dual-ring"></div>`
     const response = await fetch(url);
 
     const json = await response.json();
@@ -23,7 +51,7 @@ async function APIcall(url) {
 
       //SALE SECTION--------------------------------------------------------------
       if (json[i].on_sale == true) {
-        container.innerHTML += `
+        saleHTML += `
         <div class="weekly_sale_item sale1">
         <a href="Product_page.html?id=${json[i].id}">
             <div class = "img_container_sale">
@@ -41,6 +69,7 @@ async function APIcall(url) {
         </a>
       </div>
         `
+        container.innerHTML = saleHTML;
       }
 
 
