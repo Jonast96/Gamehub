@@ -14,16 +14,20 @@ const id = params.get("id");
 
 const url = "https://jonast.site/GameHub/wp-json/wc/store/products/" + id;
 
+let html = ""
+
 
 async function APIcall() {
   try {
+
+    gameInfo.innerHTML = `<div class="lds-dual-ring"></div>`
     const response = await fetch(url);
 
     const json = await response.json();
 
     console.log(json.name);
 
-    gameInfo.innerHTML += `
+    html += `
 
         <div class = "container_img">
         <h1>${json.name}</h1>
@@ -47,6 +51,7 @@ async function APIcall() {
         <a class="continue" href="/Product_page.html?id=${json.id}">Continue shopping</a>
       </dialog>
         `
+    gameInfo.innerHTML = html
 
     const modal = document.querySelector(".popup")
     const openModal = document.querySelector(".btn")
