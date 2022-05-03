@@ -4,7 +4,7 @@ const browseContainer = document.querySelector(".browse_games")
 
 const trendingContainer = document.querySelector(".trending_games")
 
-const baseUrl = "https://jonast.site/GameHub/wp-json/wc/store/products?per_page=20";
+const baseUrl = "http://jonast.site/exam/wp-json/wc/store/products?per_page=20";
 
 const displayError = document.querySelector(".error_msg")
 

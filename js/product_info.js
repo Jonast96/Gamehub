@@ -12,7 +12,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const url = "https://jonast.site/GameHub/wp-json/wc/store/products/" + id;
+const url = "http://jonast.site/exam/wp-json/wc/store/products/" + id;
 
 let html = ""
 
