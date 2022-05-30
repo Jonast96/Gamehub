@@ -6,7 +6,6 @@ An ecommerce site to sell video games.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
 This site is made to be appealing to a younger age group, but also look like a profesional site where the user feels comfortable purchasing items. 
 The main selling point is video games, but could be used to sell all gaming related items.
 
