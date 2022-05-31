@@ -44,5 +44,5 @@ You can contact me via twitter or discord.
 
 [My Twitter page](https://twitter.com/KozHD)
 
-[My discord tag](Jon-#6134)
+My discord tag: Jon-#6134
 
